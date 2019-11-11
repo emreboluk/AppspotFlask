@@ -2,4 +2,9 @@
 python 2.7 ile appspot için flask örneği
 
 - https://console.cloud.google.com üzerinden projenizi oluşturun
-- gcloud app deploy app.yaml
+- Cloud Shell'i etkinleştirin veya bilgisayarınza Cloud SDK'yı indirin
+- git clone https://github.com/emreboluk/AppspotFlask.git
+- cd AppspotFlask.git
+- gcloud app deploy app.yaml --project projenizin_adi
+
+Sonra http://projenizinadi.appspot.com adresine giderek projenizi görebilirsiniz.
