@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Sayfa</title>
+		
+		<!-- css/style.css dosyamızı tanımlamamız için gereken satır -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		
+		<!-- responsive olması için koydum, isteyenler kaldırabilirler -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+	
+		<center>
+			<!-- aşağıda ozelSayfa adlı değişken'e göre 2 tane koşul oluşturduk -->
+			<!-- mecbur değiliz tabiki isteyenler sayfa2.html hazırlayıp main.py'den ona göre yönlendirme yapabilirler. -->
+			
+			<!-- ozelSayfa değişkeni var ise -->
+			{% if ozelSayfa %}
+			
+				<h1>Sayfa2/{{ozelSayfa}}</h1>
+				<strong>Sayfa2/{{ozelSayfa}} konumundasınız.</strong><br>
+				<p>Bu deneme amaçlı hazırlanmış bir sayfadır</p>
+				<p>İsteğe göre sayfa2'yi farklı bir template'e yönlendirebilirsiniz.</p>
+				
+			<!-- ozelSayfa değişkeni yok ise -->
+			{% else %}
+			
+				<h1>Sayfa1</h1>
+				<strong>Sayfa1 konumundasınız.</strong>
+				<p>Bu deneme amaçlı hazırlanmış bir sayfadır.</p>
+			
+			<!-- koşul bitişi -->
+			{% endif %}
+			
+			<a href="/">Anasayfa</a>
+			
+		</center>
+
+	</body>
+</html>
